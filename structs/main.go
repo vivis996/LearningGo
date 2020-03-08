@@ -22,12 +22,13 @@ func main() {
 			zipCode: 12345,
 		},
 	}
+	janePointer := &jane
 	jane.updateName("Mary")
 	jane.print()
 }
 
-func (p person) updateName(newFirstName string) {
-	p.firstName = newFirstName
+func (pointerPerson *person) updateName(newFirstName string) {
+	(*pointerPerson).firstName = newFirstName
 }
 
 func (p person) print() {
