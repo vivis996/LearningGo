@@ -23,9 +23,8 @@ func main() {
 		},
 	}
 
-	janePointer := &jane
-	janePointer.updateName("Mary")
-	janePointer.print()
+	jane.updateName("Mary")
+	jane.print()
 }
 
 func (pointerPerson *person) updateName(newFirstName string) {
