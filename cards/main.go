@@ -1,6 +1,7 @@
 package main
 
 func main() {
-	cards := newDeckFromFile("myCards")
+	cards := newDeck()
+	cards.suffle()
 	cards.print()
 }
