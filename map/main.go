@@ -12,7 +12,7 @@ func main() {
 	// 	"green": "4bf745",
 	// }
 
-	colors[10] = "ffffff"
+	colors[10] = "#ffffff"
 
 	delete(colors, 10)
 
