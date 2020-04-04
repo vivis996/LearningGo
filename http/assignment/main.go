@@ -6,28 +6,27 @@ type shape interface {
 	getArea() float64
 }
 type triangle struct {
-	a int
-	b int
+	base float64
+	height float64
 }
 
 type square struct {
-	a int
-	b int
+	sideLenght float64
 }
 
 func main() {
-	t := triangle{a: 2, b: 3}
-	s := square{a: 2, b: 3}
+	t := triangle{base: 2, height: 3}
+	s := square{sideLenght: 3}
 	printArea(t)
 	printArea(s)
 }
 
 func (t triangle) getArea() float64 {
-	return float64((t.a * t.b) / 2)
+	return (t.base * t.height) / 2
 }
 
 func (s square) getArea() float64 {
-	return float64(s.a * s.b)
+	return s.sideLenght * s.sideLenght
 }
 
 func printArea(s shape) {
